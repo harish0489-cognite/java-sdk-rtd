@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Cognite Python SDK Documentation
+Cognite Java SDK Documentation
 ================================
 
-This is the Cognite Python SDK for developers and data scientists working with Cognite Data Fusion (CDF). The package is tightly integrated with pandas, and helps you work easily and efficiently with data in Cognite Data Fusion (CDF). 
+This is the Cognite Java SDK for developers and data scientists working with Cognite Data Fusion (CDF). The package is tightly integrated with pandas, and helps you work easily and efficiently with data in Cognite Data Fusion (CDF). 
 
 .. contents::
    :local:
@@ -43,17 +43,3 @@ This is just a copy paste from the repository
 
 To install with pandas, geopandas and shapely support (equivalent to installing `cognite-sdk`).
 However, this gives you the option to only have pandas (and NumPy) support without geopandas.
-
-.. code-block:: bash
-
-   pip install cognite-sdk-core[pandas, geo]
-
-
-Contents
-^^^^^^^^
-.. toctree::
-   cognite
-
-Examples
-^^^^^^^^
-For a collection of scripts and Jupyter Notebooks that explain how to perform various tasks in Cognite Data Fusion (CDF) using Python, see the GitHub repository `here <https://github.com/  cognitedata/cognite-python-docs>`__.
