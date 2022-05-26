@@ -17,19 +17,29 @@ To install this package:
 
 .. code-block:: bash
 
-   pip install cognite-sdk
+   <dependency>    
+    <groupId>com.cognite</groupId>
+    <artifactId>cdf-sdk-java</artifactId>
+    <version>1.15.0</version>
+   </dependency>
 
-To upgrade the version of this package:
-
-.. code-block:: bash
-
-   pip install cognite-sdk --upgrade
-
-To install this package without the pandas and NumPy support:
+This is just a copy paste from the repository
 
 .. code-block:: bash
-
-   pip install cognite-sdk-core
+   
+   // Create the Cognite client using API key as the authentication method
+   CogniteClient client = CogniteClient.ofKey(<yourApiKey>)
+   .withProject("myCdfProject")
+   .withBaseUrl("https://yourBaseURL.cognitedata.com");  //optional parameter
+        
+   // ... or use client credentials (OpenID Connect)
+   CogniteClient client = CogniteClient.ofClientCredentials(
+        <clientId>,
+        <clientSecret>,
+        TokenUrl.generateAzureAdURL(<azureAdTenantId>))
+        .withProject("myCdfProject")
+        .withBaseUrl("https://yourBaseURL.cognitedata.com"); //optional parameter     
+      
 
 To install with pandas, geopandas and shapely support (equivalent to installing `cognite-sdk`).
 However, this gives you the option to only have pandas (and NumPy) support without geopandas.
